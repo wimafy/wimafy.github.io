@@ -1,0 +1,46 @@
+<html ng-app>
+<head>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script type="text/javascript" src="js/angular.min%20(1).js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    
+    
+    <style>
+        .arrow-down {
+          width: 0; 
+          height: 0; 
+          border-left: 20px solid transparent;
+          border-right: 20px solid transparent;
+          border-top: 20px solid #f00;
+          position: absolute;
+          margin-left: calc(50% - 20px);
+        
+        }
+    
+        .seconddiv {
+            width: 100%;
+            height: 100px;
+            background-color: gray;
+        }
+    </style>
+    
+</head>
+<body style="margin: 0px;">
+    <p><input placeholder="Type to search..." type="text" ng-model='searchFor' size="30"/></p>
+    <div>{{searchFor}}</div>
+    <iframe
+      width="100%"
+      height="450"
+      frameborder="0" style="border:0"
+      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB9c2pKzsmj9Txd93k6GxaosXIqfAIdlEM
+        &q=Village+Market" allowfullscreen>
+    </iframe>
+    
+    
+    <div class="arrow-down"></div>
+    <div class="seconddiv"></div>
+    
+   
+    
+</body>

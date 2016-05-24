@@ -1,0 +1,54 @@
+<html ng-app>
+<head>
+    <link rel="stylesheet" type="text/css" href="wimmain.css">
+    <!--<link rel="stylesheet" href="css/bootstrap.css">-->
+    <script type="text/javascript" src="js/angular.min%20(1).js"></script>
+    <!--<script type="text/javascript" src="js/bootstrap.min.js"></script>-->
+    
+</head>
+<body>
+    <div value="init div"  ng-init="wims =
+                                      [ { wimIcon: 'NA', wimName: 'Water drinking', destination: 'Sewage plant', attendees: '6', dateTime: 'Monday May 24'},
+                                      { wimIcon: 'NA', wimName: 'WIM meeting', destination: 'Google Hangouts', attendees: '5', dateTime: 'Monday May 24 3:00 pm'},
+                                    
+                                     ] "></div>
+    <div class="headerdiv" >
+        <a href="homepage.html">
+            <img class="headerbackarrow" src="web_images/left-arrow.png">
+        </a>
+        <h1 class="headerpagetitle">Current WIMs</h1>
+
+    </div>
+
+    <div class="meatcontent" >
+
+
+    <div class="currentwimsindividualdiv" ng-repeat="wim in wims | filter:{ title: searchFor} | orderBy: 'date'">
+        <a href="WIMinfo.html">
+            <img class="currentwimswimtypeimg" src="web_images/camping.jpg">
+            <div class="currentwimswimnameanddestinationholder">
+                <p class="currentwimswimname">{{ wim.wimName }}</p>
+                <p class="currentwimswimdestination">{{ wim.destination }}</p>
+            </div>
+            <div class="currentwimparticipantsdiv">
+                <img class="currentwimparticipantsimg" src="user_profile_pics/74.jpg">
+                <img class="currentwimparticipantsimg" src="user_profile_pics/74.jpg">
+                <img class="currentwimparticipantsimg" src="user_profile_pics/74.jpg">
+                <div class="currentwimparticipantsimg">{{ wim.attendees }}</div>
+            </div>
+            <div class="currentwimswimtimesdiv">
+                <p class="currentwimscountdown">20 days</p>
+                <p class="currentwimsactualtime">{{ wim.dateTime }}</p>
+            </div>
+          </a>
+    </div>
+
+
+    </div>
+
+
+
+
+</body>
+
+</html>

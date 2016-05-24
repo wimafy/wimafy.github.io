@@ -1,2 +1,0 @@
-# wimafy.github.io
-demo

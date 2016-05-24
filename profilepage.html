@@ -1,0 +1,174 @@
+<html ng-app>
+<head>
+    <link rel="stylesheet" type="text/css" href="wimmain.css">
+    <!--<link rel="stylesheet" href="css/bootstrap.css">-->
+    <script type="text/javascript" src="js/angular.min%20(1).js"></script>
+    <!--<script type="text/javascript" src="js/bootstrap.min.js"></script>-->
+
+</head>
+<body style="background-color: lightgray">
+
+      <div value="init div"  ng-init="pastWims =
+                                      [ { wimIcon: 'NA', wimName: 'Water drinking', destination: 'Sewage plant', attendees: '6', dateTime: 'Monday May 24'},
+                                      { wimIcon: 'NA', wimName: 'WIM meeting', destination: 'Google Hangouts', attendees: '5', dateTime: 'Monday May 24 3:00 pm'},
+                                     ] ;
+
+                                      profileInfo = 
+                                      {profilePic: '64.jpg', firstName: 'Jason', givenName: 'Jason Bryner', phone: '(704)-576-9257', email: 'jasonbryner@gmail.com', location: 'Collegedale TN', birthday: 'May 4, 1973', gender: 'Male', bio: 'George Washington was the first President of the United States the Commander-in-Chief of the Continental Army during the American Revolutionary War, and one of the Founding Fathers of the United States'} ;
+                                      
+                                      interests = 
+                                      [ { image: 'videogames.jpg', text: 'Video Games'}, { image: 'swimming.png', text: 'Swimming'}, { image: 'travel.png', text: 'Traveling'}, { image: 'Food-Dome-512.png', text: 'Fine Dining'}] ;
+                                      
+                                      friends = 
+                                      [ { friendpic: '1.jpg', friendGivenName: 'Braxton Young'}, { friendpic: '63.jpg', friendGivenName: 'Nathan Wayman'}, { friendpic: '65.jpg', friendGivenName: 'Isaac James'}, { friendpic: '68.jpg', friendGivenName: 'Keightee Weeks'}, { friendpic: '74.jpg', friendGivenName: 'Spencer Williams'}, { friendpic: '75.jpg', friendGivenName: 'Riley Boone'}, { friendpic: '76.jpg', friendGivenName: 'Eric Johnson'},{ friendpic: '1.jpg', friendGivenName: 'Braxton Young'}, { friendpic: '63.jpg', friendGivenName: 'Nathan Wayman'}, { friendpic: '65.jpg', friendGivenName: 'Isaac James'}, { friendpic: '68.jpg', friendGivenName: 'Keightee Weeks'}, { friendpic: '74.jpg', friendGivenName: 'Spencer Williams'}, { friendpic: '75.jpg', friendGivenName: 'Riley Boone'}, { friendpic: '76.jpg', friendGivenName: 'Eric Johnson'},{ friendpic: '1.jpg', friendGivenName: 'Braxton Young'}, { friendpic: '63.jpg', friendGivenName: 'Nathan Wayman'}, { friendpic: '65.jpg', friendGivenName: 'Isaac James'}, { friendpic: '68.jpg', friendGivenName: 'Keightee Weeks'}, { friendpic: '74.jpg', friendGivenName: 'Spencer Williams'}, { friendpic: '75.jpg', friendGivenName: 'Riley Boone'}, { friendpic: '76.jpg', friendGivenName: 'Eric Johnson'},{ friendpic: '1.jpg', friendGivenName: 'Braxton Young'}, { friendpic: '63.jpg', friendGivenName: 'Nathan Wayman'}, { friendpic: '65.jpg', friendGivenName: 'Isaac James'}, { friendpic: '68.jpg', friendGivenName: 'Keightee Weeks'}, { friendpic: '74.jpg', friendGivenName: 'Spencer Williams'}, { friendpic: '75.jpg', friendGivenName: 'Riley Boone'}, { friendpic: '76.jpg', friendGivenName: 'Eric Johnson'}, ]
+                                      ">
+
+    </div>
+
+
+    <div class="headerdiv">
+        <a href="homepage.html">
+            <img class="headerbackarrow" src="web_images/left-arrow.png">
+        </a>
+        <h1 class="headerpagetitle">{{profileInfo.firstName}}'s Profile</h1>
+
+    </div>
+
+    <div class="meatcontent" style="overflow-x: none;">
+        <div class="profiletopdivbackgroundblur"></div>
+        <div class="profiletopdiv">
+            <img class="profiletopleftactioncircle" src="web_images/Messages%20(1).png">
+            <img class="profiletopprofilepiccircle" src="user_profile_pics/{{profileInfo.profilePic}}">
+            <img class="profiletoprightactioncircle" src="web_images/add-512%20(1).png">
+            <h1 class="profiletopname">{{profileInfo.givenName}}</h1>
+        </div>
+        <div class="profileoptionchooser">
+            <div class="profileoptiondiv" onclick="pastwims()">
+                <img class="profileoptionpic" src="web_images/W.png">
+            </div>
+                    <div class="profileoptiondividerline"></div>
+            <div class="profileoptiondiv" onclick="friends()">
+                <img class="profileoptionpic" src="web_images/friends.png">
+            </div>
+                    <div class="profileoptiondividerline"></div>
+            <div class="profileoptiondiv" onclick="userinfo()">
+                <img class="profileoptionpic" src="web_images/info-icon.png">
+            </div>
+
+        </div>
+
+        <div class="profilebottomdiv">
+            <div id="pastwims" class="profilebottompastwimsdiv">
+
+                <div class="currentwimsindividualdiv" ng-repeat="pastWim in pastWims | filter:{ title: searchFor} | orderBy: 'date'">
+                    <a href="WIMinfo.html">
+                        <img class="currentwimswimtypeimg" src="web_images/camping.jpg">
+                        <div class="currentwimswimnameanddestinationholder">
+                            <p class="currentwimswimname">{{ pastWim.wimName }}</p>
+                            <p class="currentwimswimdestination">{{ pastWim.destination }}</p>
+                        </div>
+                        <div class="currentwimparticipantsdiv">
+                            <img class="currentwimparticipantsimg" src="user_profile_pics/74.jpg">
+                            <img class="currentwimparticipantsimg" src="user_profile_pics/74.jpg">
+                            <img class="currentwimparticipantsimg" src="user_profile_pics/74.jpg">
+                            <div class="currentwimparticipantsimg">{{ pastWim.attendees }}</div>
+                        </div>
+                        <div class="currentwimswimtimesdiv">
+                            <p class="currentwimscountdown">20 days</p>
+                            <p class="currentwimsactualtime">{{ pastWim.dateTime }}</p>
+                        </div>
+                      </a>
+                </div>
+
+
+
+
+            </div>
+            <div id="friends" class="profilebottomfriendsdiv" style="z-index: 2">
+                
+                <div onclick="testbutton('03')" id="03" class="eachfriend" ng-repeat="friend in friends | filter:{ title: searchFor} | orderBy: 'date'">
+                    <img src="user_profile_pics/{{friend.friendpic}}" class="myfriendspic">
+                    <p class="myfriendsname">{{friend.friendGivenName}}</p>
+
+                </div>
+                
+                
+            </div>
+            <div id="info" class="profilebottominfodiv" style="z-index: 5;">
+                <div class="profileinfoleftdiv">
+                    <div class="profileinfoindividualdiv">
+                        <img class="profileinfoleftinfoimage" src="web_images/phoneimage.png">
+                        <p class="profileinfoleftinfotitle">Phone</p>
+                        <p class="profileinfoleftinfoinformation">{{profileInfo.phone}}</p>
+                    </div>
+                    <div class="profileinfoindividualdiv">
+                        <img class="profileinfoleftinfoimage" src="web_images/envelope-icon.png">
+                        <p class="profileinfoleftinfotitle">Email</p>
+                        <p class="profileinfoleftinfoinformation">{{profileInfo.email}}</p>
+                    </div>
+                    <div class="profileinfoindividualdiv">
+                        <img class="profileinfoleftinfoimage" src="web_images/city.png">
+                        <p class="profileinfoleftinfotitle">Location</p>
+                        <p class="profileinfoleftinfoinformation">{{profileInfo.location}}</p>
+                    </div>
+                    <div class="profileinfoindividualdiv">
+                        <img class="profileinfoleftinfoimage" src="web_images/Birthday-Cake-512.png">
+                        <p class="profileinfoleftinfotitle">Birthday</p>
+                        <p class="profileinfoleftinfoinformation">{{profileInfo.birthday}}</p>
+                    </div>
+                    <div class="profileinfoindividualdiv">
+                        <img class="profileinfoleftinfoimage" src="web_images/male-female-icon.png">
+                        <p class="profileinfoleftinfotitle">Gender</p>
+                        <p class="profileinfoleftinfoinformation">{{profileInfo.gender}}</p>
+                    </div>
+                    <div class="profileinfoindividualdiv">
+                        <img class="profileinfoleftinfoimage" src="web_images/note-512.png">
+                        <p class="profileinfoleftinfotitle">Bio</p>
+                        <p class="profileinfoleftinfoinformation" style="height: 200px; overflow-y: auto;">{{profileInfo.bio}}</p>
+                    </div>
+                </div>
+
+                <div class="profileinforightdiv">
+                        
+                    <div class="profileinterestsdiv" ng-repeat="interest in interests | filter:{ title: searchFor} | orderBy: 'date'">
+                        <img class="profileinterestsimg" src="web_images/{{interest.image}}">
+                        <p class="profileintereststext">{{interest.text}}</p>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+<script>
+
+    function pastwims() {
+        //alert("past wims");
+        document.getElementById("pastwims").style.zIndex = "1";
+        document.getElementById("friends").style.zIndex = "0";
+        document.getElementById("info").style.zIndex = "0";
+    }
+
+    function friends() {
+        //alert("firends");
+        document.getElementById("pastwims").style.zIndex = "0";
+        document.getElementById("friends").style.zIndex = "1";
+        document.getElementById("info").style.zIndex = "0";
+    }
+
+    function userinfo() {
+        //alert("user info");
+        document.getElementById("pastwims").style.zIndex = "0";
+        document.getElementById("friends").style.zIndex = "0";
+        document.getElementById("info").style.zIndex = "1";
+    }
+
+</script>
+
+
+</body>
+
+</html>

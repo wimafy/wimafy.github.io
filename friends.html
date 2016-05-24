@@ -1,0 +1,96 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="wimmain.css">
+</head>
+<body style="background-color: white;">
+    <div class="headerdiv">
+        <a href="homepage.html">
+            <img class="headerbackarrow" src="web_images/left-arrow.png">
+        </a>
+        <h1 class="headerpagetitle">My Friends</h1>
+        <img class="headerplusicon" src="web_images/add-512%20(1).png" value="add friend">
+    </div>
+    
+    <div class="meatcontent">
+        <a href="profilepage.html">
+            <div onclick="testbutton('01')" id="01" class="eachfriend">
+                <img src="user_profile_pics/1.jpg" class="myfriendspic">
+                <p class="myfriendsname">Braxtond Young</p>
+
+            </div>
+        </a>
+        <div onclick="testbutton('02')" id="02" class="eachfriend">
+            <img src="user_profile_pics/64.jpg" class="myfriendspic">
+            <p class="myfriendsname">Jason Bryner</p>
+         
+        </div>
+        <div onclick="testbutton('03')" id="03" class="eachfriend">
+            <img src="user_profile_pics/1.jpg" class="myfriendspic">
+            <p class="myfriendsname">Braxton Young</p>
+        
+        </div>
+        <div onclick="testbutton('04')" id="04" class="eachfriend">
+            <img src="user_profile_pics/1.jpg" class="myfriendspic">
+            <p class="myfriendsname">Braxton Young</p>
+
+        </div>
+        <div onclick="testbutton('05')" id="05" class="eachfriend">
+            <img src="user_profile_pics/1.jpg" class="myfriendspic">
+            <p class="myfriendsname">Braxton Young</p>
+           
+        </div>
+        <div onclick="testbutton('06')" id="06" class="eachfriend">
+            <img src="user_profile_pics/1.jpg" class="myfriendspic">
+            <p class="myfriendsname">Braxton Young</p>
+            
+        </div>
+        <div onclick="testbutton('07')" id="07" class="eachfriend">
+            <img src="user_profile_pics/1.jpg" class="myfriendspic">
+            <p class="myfriendsname">Braxton Young</p>
+
+        </div>
+        <div onclick="testbutton('08')" id="08" class="eachfriend">
+            <img src="user_profile_pics/1.jpg" class="myfriendspic">
+            <p class="myfriendsname">Braxton Young</p>
+           
+        </div>
+        <div onclick="testbutton('09')" id="09" class="eachfriend">
+            <img src="user_profile_pics/1.jpg" class="myfriendspic">
+            <p class="myfriendsname">Braxton Young</p>
+           
+        </div>
+        <div onclick="testbutton('10')" id="10" class="eachfriend">
+            <img src="user_profile_pics/1.jpg" class="myfriendspic">
+            <p class="myfriendsname">Braxton Young</p>
+           
+        </div>
+        
+      
+        
+        
+        
+    
+        
+    
+    
+    
+    </div>
+    
+<script>
+    function testbutton(idnum) {
+        var selectedid = document.getElementById(idnum);
+        
+        if (selectedid.style.backgroundColor == "") {
+           selectedid.style.backgroundColor = '#2ecc71';
+        }else{
+            selectedid.style.backgroundColor = "";
+        }
+        
+        
+    }
+    
+</script>
+   
+</body>
+
+</html>

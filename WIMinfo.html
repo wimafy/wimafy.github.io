@@ -1,0 +1,96 @@
+<html ng-app>
+<head>
+    <link rel="stylesheet" type="text/css" href="wimmain.css">
+    <!--<link rel="stylesheet" href="css/bootstrap.css">-->
+    <script type="text/javascript" src="js/angular.min%20(1).js"></script>
+    <!--<script type="text/javascript" src="js/bootstrap.min.js"></script>-->
+
+</head>
+<body>
+
+      <div value="init div"  ng-init="wimInfo =
+                                       { wimIcon: 'coffee-5.jpg', wimName: 'Water drinking', destination: 'Sewage plant', street: '24 Fresh Stank Ln', attendees: '6', dateTime: 'Monday May 24', description: 'Anna Eleanor Roosevelt was an American politician, diplomat, and activist. She was the longest-serving First Lady of the United States, holding the post from March 1933 to April 1945 during her husband ... Wikipedia'};
+                                      
+                                     attendees = 
+                                      [ {attendeePicture: '64.jpg', attendeeGivenName: 'Jason Bryner', attendeeResponse: 'Y', attendeeResponseColor: ''},
+                                      {attendeePicture: '1.jpg', attendeeGivenName: 'Braxton Young', attendeeResponse: 'Y', attendeeResponseColor: ''}, 
+                                      {attendeePicture: '63.jpg', attendeeGivenName: 'Nathan Wayman', attendeeResponse: '~', attendeeResponseColor: '#FF9800'},
+                                      {attendeePicture: '74.jpg', attendeeGivenName: 'Spenser Williams', attendeeResponse: 'N', attendeeResponseColor: '#f44336'},
+                                      {attendeePicture: '75.jpg', attendeeGivenName: 'Riley Boone', attendeeResponse: 'U', attendeeResponseColor: '#9E9E9E'},
+                                      ]
+                                      
+                                      ">
+
+    </div>
+    <div class="headerdiv">
+        <a href="homepage.html">
+            <img class="headerbackarrow" src="web_images/left-arrow.png">
+        </a>
+        <h1 class="headerpagetitle">{{wimInfo.wimName}}</h1>
+        <img class="headerplusicon" src="web_images/add-512%20(1).png" value="invite friend">
+    </div>
+    
+    <div class="wiminfomeatcontent" style="background-color: white;">
+        <div class="wiminfopicturediv">
+            
+            
+            <iframe class="wiminfopicture" 
+              width="100%"
+              height="450"
+              frameborder="0" style="border:0"
+              src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB9c2pKzsmj9Txd93k6GxaosXIqfAIdlEM
+                &q=Southern+Adventist+University+Sundial" allowfullscreen>
+            </iframe>
+            
+            
+            
+        </div>
+        <div class="wiminfowimicon">
+            <img class="wiminfowimiconpic" src="web_images/{{wimInfo.wimIcon}}">
+        </div>
+        <div class="wiminfodirections">
+            <img class="wiminfodirectionsicon" src="web_images/destination.png">
+            <p class="wiminfodestination">{{wimInfo.destination}}</p>
+            <p class="wiminfodestinationstreetname">{{wimInfo.street}}</p>
+        </div>
+        
+        
+        <div class="wiminfoattendees" style="margin-top: -20px;">
+            <img class="wiminfoattendeesicon" src="web_images/friends.png">
+            <p class="wiminfoattendeeslable">Friends</p>
+        </div>
+        
+        <div class="wiminfobottomline"></div>
+        <div class="wiminfoattendeesholderdiv">
+            <div class="wiminfoattendeessliderdiv">
+                
+                <div class="wiminfoindividualattendee" ng-repeat="attendee in attendees | filter:{ title: searchFor} | orderBy: 'date'">
+                    <img class="wiminfoindividualattendeepic" src="user_profile_pics/{{attendee.attendeePicture}}">
+                    <p class="wiminfoindividualattendeename">{{attendee.attendeeGivenName}}</p>
+                    <div class="wiminfoindividualattendeestatus" style="background-color: {{attendee.attendeeResponseColor}}">{{attendee.attendeeResponse}}</div>
+                    
+                </div>
+                
+                
+            </div>
+        </div>
+        <div class="wiminfobottomline"></div>
+        <div class="wiminfoattendees">
+            <img class="wiminfodetails" src="web_images/View_Details.png">
+            <p class="wiminfoattendeeslable">Details</p>
+        </div>
+        
+        <div class="wiminfodetailsactualtextdiv">
+            <p class="wiminfodetailsactualtext">{{wimInfo.description}}</p>
+        </div>
+        
+        
+        
+    </div>
+    
+    
+
+   
+</body>
+
+</html>
