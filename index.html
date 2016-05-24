@@ -1,0 +1,48 @@
+<html ng-app>
+<head>
+    <link rel="stylesheet" type="text/css" href="wimmain.css">
+    <!--<link rel="stylesheet" href="css/bootstrap.css">-->
+    <script type="text/javascript" src="js/angular.min%20(1).js"></script>
+    <!--<script type="text/javascript" src="js/bootstrap.min.js"></script>-->
+    
+</head>
+<body>
+    <div value="init div"  ng-init="profileInfo = 
+                                      {profilePic: '64.jpg', firstName: 'Jason', givenName: 'Jason Bryner', phone: '(704)-576-9257', email: 'jasonbryner@gmail.com', location: 'Collegedale TN', birthday: 'May 4, 1973', gender: 'Male', bio: 'George Washington was the first President of the United States the Commander-in-Chief of the Continental Army during the American Revolutionary War, and one of the Founding Fathers of the United States'}"></div>
+    
+    <a href="notifications.html">
+        <div class="homepagenotificationsbutton">
+            <p class="homepagenotificationsname">{{profileInfo.givenName}}</p>
+            <img class="homepagenotificationsimage" src="user_profile_pics/{{profileInfo.profilePic}}">
+            <div class="homepagenotificationsnumber">3</div>
+        </div>
+    </a>
+    <a href="signin.html">
+        <img class="homepagesettingsbutton" src="web_images/gear-512.png">
+    </a>
+        
+    <div class='circle-container'>
+
+        <a href='newWIM.html' class='deg0'>
+            <img id="homepagetopbutton" class="homepagebuttondiv" style="margin: -75px -50px;" src="web_images/add-512%20(1).png"> 
+            <p id="homepagetopbuttonlable" class="homepagebuttonlable">New WIM</p>
+
+
+        </a>
+        <a href='profilepage.html' class='deg45'>
+            <img class="homepagebuttondiv" style="margin: 0px -30px;" src="web_images/profile.png"> 
+            <p class="homepagebuttonlable">My profile</p>
+
+        </a>
+        <a href='currentWIMs.html' class='deg135'>
+            <img class="homepagebuttondiv" style="margin: 0px -30px;" src="web_images/feed.png"> 
+            <p class="homepagebuttonlable">Current WIMs</p>
+
+        </a>
+
+    </div>
+
+
+</body>
+
+</html>
