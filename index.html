@@ -13,41 +13,54 @@
     <div value="init div"  ng-init="profileInfo = 
                                       {profilePic: '64.jpg', firstName: 'Jason', givenName: 'Jason Bryner', phone: '(704)-576-9257', email: 'jasonbryner@gmail.com', location: 'Collegedale TN', birthday: 'May 4, 1973', gender: 'Male', bio: 'George Washington was the first President of the United States the Commander-in-Chief of the Continental Army during the American Revolutionary War, and one of the Founding Fathers of the United States'}"></div>
     
-    <img class="homepagewimlogo" src="web_images/dr-dre-beats-logo.png">
+    <div class="homepagewimlogo">
+        <i class="material-icons" style="font-size: 80px;">&#xE87C;</i>
+    </div>
     
     <a href="notifications.html">
         <div class="homepagesettingsbuttondiv">
             <img class="homepagesettingsbutton" src="user_profile_pics/{{profileInfo.profilePic}}">
-            <img class="homepagesettingsdownarrow" src="web_images/material-design-icons-2.2.0/hardware/2x_web/ic_keyboard_arrow_down_white_48dp.png">
+            <i class="material-icons homepagesettingsdownarrow" style="font-size: 65px; color: white;">&#xE313;</i>
         </div>
     </a>
  
-            <i class="material-icons">&#xE87C;</i>
+            
     <div class='circle-container'>
 
         <a href='newWIM.html' class='deg0'>
-            <img id="homepagetopbutton" class="homepagebuttondiv" style="margin: -75px -50px;" src="web_images/material-design-icons-2.2.0/content/2x_web/ic_add_circle_outline_white_48dp.png"> 
-            <p id="homepagetopbuttonlable" class="homepagebuttonlable">New WIM</p>
+            <div class="homepagebuttondiv" style="margin: -75px -50px;">
+                <i class="material-icons" id="homepagebuttonpics" >&#xE148;</i>
+            </div>
+            
+            <p id="homepagetopbuttonlable" class="homepagebuttonlable" style="">New WIM</p>
 
 
         </a>
         <a href='profilepage.html' class='deg245'>
-            <img class="homepagebuttondiv" style="margin: 0px -30px;" src="web_images/material-design-icons-2.2.0/social/2x_web/ic_person_outline_white_48dp.png"> 
+            <div class="homepagebuttondiv" style="margin: 0px -30px;">
+                <i class="material-icons" id="homepagebuttonpics" >&#xE7FD;</i>
+            </div>
             <p class="homepagebuttonlable">My profile</p>
 
         </a>
         <a href='currentWIMs.html' class='deg45'>
-            <img class="homepagebuttondiv" style="margin: 0px -30px;" src="web_images/material-design-icons-2.2.0/social/2x_web/ic_public_white_48dp.png"> 
+            <div class="homepagebuttondiv" style="margin: 0px -30px;">
+                <i class="material-icons" id="homepagebuttonpics" >&#xE80E;</i>
+            </div>
             <p class="homepagebuttonlable">Current WIMs</p>
 
         </a>
         
         <a href='notifications.html' class='deg135'>
-            <img class="homepagebuttondiv" style="margin: 0px -30px;" src="web_images/material-design-icons-2.2.0/social/2x_web/ic_notifications_none_white_48dp.png"> 
+            <div class="homepagebuttondiv" style="margin: 0px -30px;">
+                <i class="material-icons" id="homepagebuttonpics" >&#xE7F5;</i>
+            </div> 
             <p class="homepagebuttonlable">Notifications</p>
             <div class="homepagenotifications">99</div>
 
         </a>
+        
+        
         
 
     </div>

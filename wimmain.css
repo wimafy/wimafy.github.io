@@ -310,7 +310,7 @@ a {
 
 
 #homepagetopbuttonlable {
-    margin: -110px -75px;
+    margin: -200px -75px;
     -ms-transform: rotate(180deg); /* IE 9 */
     -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
     transform: rotate(180deg);
@@ -896,4 +896,9 @@ a {
     font-size: 25px;
     color: #2196F3;
     font-family: Arial Black;
+}
+
+#homepagebuttonpics {
+    color: white;
+    font-size: 140px;
 }
