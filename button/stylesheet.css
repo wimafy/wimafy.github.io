@@ -1,0 +1,45 @@
+div.button{
+    position: absolute;
+    bottom: 100px;
+    right: 110px;
+
+}
+
+.buttoninit{
+    z-index: 6;
+    position: absolute;
+}
+.bttn1{
+    z-index: 2; 
+    position: absolute;
+}
+.bttn2{
+    z-index: 3;
+    position: absolute;
+}
+.bttn3{
+    z-index: 4;
+    position: absolute;
+}
+.bttn4{
+    z-index: 5;
+    position: absolute;
+}
+
+
+.transform-active { 
+ -webkit-transform:translateY(-50px);
+ -webkit-transition: all .25s ease-in-out;
+}
+.transform2-active { 
+ -webkit-transform:translateY(-100px);
+ -webkit-transition: all .35s ease-in-out;
+}
+.transform3-active { 
+ -webkit-transform:translateY(-150px);
+ -webkit-transition: all .45s ease-in-out;
+}
+.transform4-active { 
+ -webkit-transform:translateY(-200px);
+ -webkit-transition: all .55s ease-in-out;
+}
