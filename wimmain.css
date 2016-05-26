@@ -19,6 +19,7 @@ a {
     background-color: #ef5350;
     position: relative;
     z-index: 2;
+    box-shadow: 0px 24px 30px 0px rgba(0,0,0,0.2);
 }
 
 .homepagewimlogo {
@@ -443,12 +444,6 @@ a {
 }
 
 /*WIM info*/
-.wiminfomeatcontent {
-    width: 100%;
-    height: calc(100vh - 150px);
-    
-    
-}
 
 
 .wiminfopicturediv {
@@ -456,6 +451,7 @@ a {
     height: 500px;
     background-color: lightgray;
     overflow: hidden;
+    border-radius: 8px 8px 0px 0px;
 }
 
 .wiminfopicture {
@@ -472,18 +468,27 @@ a {
     position: absolute;
     right: 0px;
     z-index: 1;
-    background-color: lightgray;
     border-radius: 50%;
 }
 
 .wiminfowimiconpic {
-    width: 200px;
-    height: 200px;
-    background-color: lightgray;
+    width: 125px;
+    height: 125px;
+    background-color: #16A243;
     margin: auto;
     display: block;
-    margin-top: 0px;
+    margin-top: 8px;
     border-radius: 50%;
+    box-shadow: 0px 15px 34px 6px rgba(0,0,0,0.2);
+}
+
+#wiminfowimiconpicicon {
+    line-height: 125px;
+    width: 125px;
+    text-align: center;
+    font-size: 80px;
+    color: white;
+    
 }
 
 .wiminfodirections {
@@ -499,6 +504,32 @@ a {
     margin: 50px;
     margin-right: 25px;
 }
+
+#wiminfodirectionsiconactualicon {
+    width: 65px;
+    line-height: 70px;
+    font-size: 70px;
+    color: #3f3f3f;
+    
+}
+
+#wiminfopeopleactualicon {
+    width: 65px;
+    line-height: 70px;
+    font-size: 55px;
+    color: #3f3f3f;
+    
+}
+
+#wiminfodetailsactualicon {
+    width: 65px;
+    line-height: 40px;
+    font-size: 55px;
+    color: #3f3f3f;
+    
+}
+
+
 
 .wiminfodestination {
     float: left;
@@ -518,9 +549,9 @@ a {
     float: left;
     width: calc(100% - 200px);
     height: 40px;
-    margin-top: -10;
-    line-height: 40px;
-    font-size: 25px;
+    margin-top: 0pc;
+    line-height: 35px;
+    font-size: 35px;
     font-family: Arial;
     color: #3f3f3f;
     opacity: .7;
@@ -559,7 +590,7 @@ a {
     margin-top: 30;
     margin-bottom: -10px;
     line-height: 50px;
-    font-size: 50px;
+    font-size: 60px;
     font-family: Arial;
     color: #3f3f3f;    
 }
@@ -650,9 +681,24 @@ a {
 .wiminfodetailsactualtext {
     width: 100%;
     float: left;
-    overflow-y: visible;
     font-family: Arial;
-    font-size: 12px;
+    font-size: 14px;
+}
+
+.wiminfomeatcontent {
+    width: calc(100% - 60px);
+    height: calc(100% - 725px);
+    margin: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 12px 16px 0px rgba(0,0,0,0.2);
+}
+
+#wiminfoheadericon {
+    line-height: 160px;
+    font-size: 50px;
+    color: white;
+    margin-left: 10px;
+    
 }
 
 /*profile page */
@@ -968,11 +1014,11 @@ a {
 }
 
 #notificationstypeimage {
-    font-size: 80px;
+    font-size: 70px;
     line-height: 120px;
     width: 120px;
     text-align: center;
-    color: #3f3f3f;
+    /*color: #3f3f3f;*/
 }
 
 .currentwimsfriendrequestresponsediv {
