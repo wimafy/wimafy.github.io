@@ -949,7 +949,7 @@ a {
 }
 
 
-<<<<<<< HEAD
+
 /* notifications page */
 
 .notificationslable {
@@ -963,6 +963,7 @@ a {
     margin: 5px 0px;
     border-radius: 2px;
     text-indent: 150px;
+    margin-top: 0px;
     
 }
 
@@ -991,4 +992,107 @@ a {
 #currentwimsfriendrequestresponseoptionicon {
     font-size: 79px;
     line-height: 120px;
+}
+
+/* modal css */
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 3; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+    
+    
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  
+        
+}
+
+
+    
+.modal-viewwiminfo {
+    position: relative;
+    width: calc(33% + 200px);
+    height: 120px;
+    background-color: #ef5350;
+    border-radius: 8px;
+    margin-left: calc(33% - 100px);
+    margin-top: 70%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    font-family: Arial;
+    text-align: center;
+    line-height: 120px;
+    font-size: 80px;
+    color: white;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+    
+#modal-contenticon {
+    width: 150px;
+    line-height: 150px;
+    text-align: center;
+    font-size: 120px;
+    color: white;
+}
+    
+.modal-lable {
+    width: 200px;
+    text-align: center;
+    color: white;
+    font-family: Arial;
+    font-size: 40px;
+    margin-left: -25px;
+}
+
+.modalbutton {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: green;
+    bottom: 135px;
+    right: 135px;
+    z-index: 2;
+    border: none;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2),0 12px 40px 0 rgba(0,0,0,0.19);
+}
+
+#modalbuttonicon {
+    font-size: 100px;
+    line-height: 150px;
+    width: 150px;
+    text-align: center;
+    color: white;
+    margin-left: -5px; /* i have no idea why this is nessisary */
+    
+}
+
+#modaltrashicon {
+    position: absolute;
+    bottom: 180px;
+    left: 60px;
+    font-size: 125px;
 }
