@@ -5,11 +5,14 @@
     <script type="text/javascript" src="js/angular.min%20(1).js"></script>
     <!--<script type="text/javascript" src="js/bootstrap.min.js"></script>-->
     
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    
 </head>
 <body>
     <div value="init div"  ng-init="wims =
-                                      [ { wimIcon: 'NA', wimName: 'Water drinking', destination: 'Sewage plant', attendees: '6', dateTime: 'Monday May 24'},
-                                      { wimIcon: 'NA', wimName: 'WIM meeting', destination: 'Google Hangouts', attendees: '5', dateTime: 'Monday May 24 3:00 pm'},
+                                      [ { wimIcon: '&#xE544', wimName: 'Water drinking', destination: 'Sewage plant', attendees: '6', dateTime: 'Monday May 24'},
+                                      { wimIcon: '&#xE30A', wimName: 'WIM meeting', destination: 'Google Hangouts', attendees: '5', dateTime: 'Monday May 24 3:00 pm'}
                                     
                                      ] "></div>
     <div class="headerdiv" >
@@ -25,7 +28,9 @@
 
     <div class="currentwimsindividualdiv" ng-repeat="wim in wims | filter:{ title: searchFor} | orderBy: 'date'">
         <a href="WIMinfo.html">
-            <img class="currentwimswimtypeimg" src="web_images/camping.jpg">
+            <div class="currentwimswimtypeimg">
+                <i id="notificationstypeimage" class="material-icons">{{ wim.wimIcon }}</i>
+            </div>
             <div class="currentwimswimnameanddestinationholder">
                 <p class="currentwimswimname">{{ wim.wimName }}</p>
                 <p class="currentwimswimdestination">{{ wim.destination }}</p>
