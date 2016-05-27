@@ -33,6 +33,15 @@
         </a>
         <h1 class="headerpagetitle">{{wimInfo.wimName}} </h1>
         <i id="wiminfoheadericon" class="material-icons">{{wimInfo.wimIcon}}</i>
+        
+        <div class="wiminfoheaderdatetimediv">
+            <h1 class="wiminfoheaderwtimetillwim">
+                4 hours
+            </h1>
+            <h1 class="wiminfoheaderdateofwim">
+                2pm Friday May 27
+            </h1>
+        </div>
     </div>
     
 <div class="wiminfomeatcontent" style="background-color: white;">
@@ -52,9 +61,10 @@
     </div>
     <div class="wiminfobottomdiv">
         <div class="wiminfowimicon">
-            <div class="wiminfowimiconpic" onclick="viewmodal()">
+            <div id="wiminforesponsebutton" class="wiminfowimiconpic" onclick="viewmodal()">
                 <i id="wiminfowimiconpicicon" class="material-icons">&#xE5CA;</i>
             </div>
+            <h1 id="wiminfowimiconpiclable" class="wiminforesponsebuttonlable">Maybe</h1>
         </div>
         <div class="wiminfodirections">
             <div class="wiminfodirectionsicon">
@@ -70,11 +80,12 @@
                 <i id="wiminfodetailsactualicon" class="material-icons">&#xE24D;</i>
             </div>
             <p class="wiminfoattendeeslable">Details</p>
-        </div>
-        
-        <div class="wiminfodetailsactualtextdiv">
+            <div class="wiminfodetailsactualtextdiv">
             <p class="wiminfodetailsactualtext">{{wimInfo.description}}</p>
         </div>
+        </div>
+        
+        
         
         
         
@@ -90,11 +101,11 @@
 
           <!-- Modal content -->
         <div style="margin-top: 50%;">
-          <div class="modal-content" style="background-color: #529dcc;" onclick="modalclick(2)">
+          <div class="modal-content" style="background-color: #FBC02D;" onclick="modalclick(2)">
 
-              <i id="modal-contenticon" class="material-icons" style="font-size: 110px;">&#xE88F;</i>
+              <i id="modal-contenticon" class="material-icons" style="font-size: 110px;">&#xE8D4;</i>
               <span class="close"></span>
-              <h1 class="modal-lable">View WIM</h1>
+              <h1 class="modal-lable">Maybe</h1>
 
           </div>
             <div>
@@ -114,7 +125,7 @@
                   </div>
             </div>
 
-            <i id="modaltrashicon" class="material-icons" style="color: #ef5350;" onclick="modalclick('Mark Wim as unreceived')">&#xE92B;</i>
+            <i id="modaltrashicon" class="material-icons" style="color: #616161;" onclick="modalclick('4')">&#xE92B;</i>
         </div>
     </div>
     <!-- modal end -->
@@ -129,7 +140,7 @@
 var modal = document.getElementById('myModal');
 
 // Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+var btn = document.getElementById("wiminforesponsebutton");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -155,8 +166,30 @@ window.onclick = function(event) {
 
 function modalclick(selectedbutton){
     x = selectedbutton;
-    alert(x);
+    //alert(x);
     modal.style.display = "none";
+    if(x == 1){
+        btn.style.backgroundColor = "#16A243";
+        document.getElementById("wiminfowimiconpicicon").innerHTML = "&#xE5CA;";
+        document.getElementById("wiminfowimiconpiclable").innerHTML = "Going";
+    }
+    if(x == 2){
+        btn.style.backgroundColor = "#FBC02D";
+        document.getElementById("wiminfowimiconpicicon").innerHTML = "&#xE8D4;";
+        document.getElementById("wiminfowimiconpiclable").innerHTML = "Maybe";
+    }
+    if(x == 3){
+        btn.style.backgroundColor = "#EF5350";
+        document.getElementById("wiminfowimiconpicicon").innerHTML = "&#xE5CD;";
+        document.getElementById("wiminfowimiconpiclable").innerHTML = "Decline";
+    }
+    if(x == 4){
+        btn.style.backgroundColor = "#616161";
+        document.getElementById("wiminfowimiconpicicon").innerHTML = "&#xE92B;";
+        document.getElementById("wiminfowimiconpiclable").innerHTML = "Unviewed";
+    }
+    
+    
 }
 </script>
     
