@@ -4,18 +4,28 @@
     
     <link rel="stylesheet" type="text/css" href="wimmain.css">
 </head>
-<body style="background-color: white;">
-    <img class="signinlogo" src="WIMlogo01.png">
+<body style="background-color: #ef5350;">
+    <img class="signinlogo" src="web_images/Drawing%20(5).png">
     
-    <div style="height: 23%;"></div>
-    <input class="signininputs" type="text" placeholder="Email">
-    <div class="signininputsbottomline"></div>
+    <div class="signindiv">
+        <img id="userpic" class="signindivuserpic" src="user_profile_pics/default-profile-thumb.png">
+        
+        <h1 class="signingivenname">Braxton Young</h1>
+        <h1 class="signinemail">youngbraxton164@gmail.com</h1>
+        <form>
     
-    <input class="signininputs" type="password" placeholder="Password">
-    <div class="signininputsbottomline"></div>
-    
-    
-    <input onclick="testbutton()" class="loginbutton" type="submit" value="Login">
+            <div class="group">      
+              <input type="text" required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>Email</label>
+            </div>
+
+            <button id="nextbutton" class="signinbutton" onclick="nextbuttonfunction()">Next</button>
+
+         </form>
+
+    </div>
     
    
     <div class="linktoanewaccount">
@@ -29,6 +39,12 @@
     function testbutton() {
         window.location = "../index.html";
     }
+    
+    function nextbuttonfunction() {
+        
+        document.getElementById("userpic").src = "user_profile_pics/1.jpg";
+    }
+    
 </script>    
 </body>
 
