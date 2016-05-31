@@ -1,0 +1,19 @@
+<hr>
+<!--This first button is a hyperlink to the Create New Wim page-->
+<div class="pull-left"><a href="/#/newWim"><button type="button" class="btn btn-success">+ Add Wim</button></a></div>
+<div class="pull-right"><button type="button" class="btn btn-info" ng-click="logout()">Logout!</button></div>
+<div class="clearfix"></div>
+
+<hr>
+
+<div class="row">
+    <div class="col-md-12">
+    	<!--I am pulling info from the 'wims' array that is created in the CurrentWimsController in controller.js-->
+        <p>You currently have <b>{{ wims.length }}</b> wims on your schedule.</p>
+        <ul>
+            <li ng-repeat="wim in wims">
+                <b>{{ wim.title }}</b> at <i>{{ wim.location }}</i>
+            </li>
+        </ul>
+    </div>
+</div>
