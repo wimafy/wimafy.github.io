@@ -20,8 +20,15 @@
               <span class="bar"></span>
               <label>Email</label>
             </div>
+            
+            <div class="group">      
+              <input type="text" required>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+              <label>Password</label>
+            </div>
 
-            <button id="nextbutton" class="signinbutton" onclick="nextbuttonfunction()">Next</button>
+            <button id="nextbutton" class="signinbutton" onclick="nextbuttonfunction()">Sign In</button>
 
          </form>
 
@@ -36,7 +43,10 @@
     
 <script>
     
-
+    function testbutton() {
+        
+    }
+    
     function nextbuttonfunction() {
         
         document.getElementById("userpic").src = "user_profile_pics/1.jpg";
