@@ -1,0 +1,41 @@
+<hr>
+<div class="pull-right"><button type="button" class="btn btn-info" ng-click="logout()">Logout!</button></div>
+<div class="clearfix"></div>
+<hr>
+<div class="row">
+	<div class="col-md-12">
+		<p> Welcome to your profile page! </p>
+		<ul>
+			<li ng-repeat="p in profile">
+				<p>{{ p.FirstName }} {{ p.LastName }}</p>
+			</li>
+		<ul>
+	</div>
+</div>
+
+<hr>
+<!--ng-model="searchFor" creates the variable to be used in search filer down below-->
+<div class="pull-left"><input type="text" ng-model="searchFor">Find a Friend</div>
+<div class="clearfix"></div>
+<hr>
+
+<div class="row">
+    <div class="col-md-12"  ng-controller="UserListController">
+    	<!--I am pulling in the 'users' array that is created in the FriendController in controller.js-->
+        <p>There are currently <b>{{ relationships.length }}</b> WIM users.</p>
+        <ul>
+        	<!--This ng-repeat is basically a for loop that loops through the users array and filters for matches that are similar to what was inputed above-->
+            <li ng-repeat="relationship in relationships | filter:searchFor">
+            	<!--I pass the user id to the addFriend function which will pass the userId onto the API to create a new friend-->
+                <b>{{ relationship.username }}</b> <button type="button" class="btn btn-info" ng-click="sendFriendRequest(relationship.id)">+ Send Friend Request</button>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+	<div class="col-md-12" ng-controller="FriendController">
+		<p>You have <b> {{friends.length}}</b> friends.</p>
+		<ul>
+			<li ng-repeat="friend in friends">
+				<b> {{friend.FirstName}} {{friend.LastName}} </b> <p> TODO: <button type="button" class="btn btn-info"> View Profile </button>

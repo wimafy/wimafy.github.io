@@ -1,0 +1,21 @@
+<div>
+        <p><input class="form-control" ng-model="currentWimTitle" placeholder="Title..." type="text"></p>
+        <p><input class="form-control" ng-model="currentWimLocation" placeholder="Location..." type="text"></p>
+        <p><input class="form-control" ng-model="currentWimAddress" placeholder="Address..." type="text"></p>
+        <p><input class="form-control" ng-model="currentWimDate" placeholder="Date..." type="date"></p>
+		<p><input class="form-control" ng-model="currentWimTime" placeholder="Time..." type="time"></p>
+		<p><input class="form-control" ng-model="currentWimTransportation" placeholder="Transportation..." type="text"></p>
+        <p><input class="form-control" ng-model="currentWimAttire" placeholder="Attire..." type="text"></p>
+        <p><input class="form-control" ng-model="currentWimDescription" placeholder="Description..." type="text"></p>
+
+		<!-- implement show friends here -->
+        <p><select multiple="multiple" ng-model="friends">
+        		<option>1</option>
+        		<option>2</option>
+        		</select>
+        		</p>
+</div>
+<div>
+		<!--Upon clicking the Save Wim button, this create function is fired to send the info to the API through the CurrentWimsController-->
+        <button type="button" class="btn btn-primary" ng-click="create()">Save Wim</button>
+</div>
