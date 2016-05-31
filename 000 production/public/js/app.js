@@ -19,8 +19,8 @@ wim.config(['$routeProvider', function($routeProvider) {
 		templateUrl: 'partials/profile.html',
 		controller: 'ProfileController'
 	}).
-	when('/notifications', {
-		templateUrl: 'partials/notifications.html',
+	when('/notify', {
+		templateUrl: 'partials/notify.html',
 		controller: 'RequestController'
 	}).
 	when('/currentWims', {
@@ -31,16 +31,12 @@ wim.config(['$routeProvider', function($routeProvider) {
         templateUrl: 'partials/newWim.html',
         controller: 'WimController'
 	}).
-    when('/wimInfo', {
-        templateUrl: 'partials/wimInfo.html',
-        controller: 'MainController'
-    }).
-    when('/homepage', {
-        templateUrl: 'partials/homepage.html',
+    when('/', {
+        templateUrl: 'partials/index.html',
         controller: 'MainController'
     }).
     otherwise({
-        redirectTo: '/homepage'
+        redirectTo: '/'
     });
 
 }]);
